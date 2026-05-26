@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mood Scribbles – Privacy Policy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink: #1a1a2e;
+      --soft: #4a4a6a;
+      --muted: #8888aa;
+      --page: #faf9f7;
+      --cream: #f3f0ea;
+      --accent: #7c6fcd;
+      --accent-light: #ede9ff;
+      --line: #e2ddd6;
+    }
+
+    body {
+      background: var(--page);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.8;
+      min-height: 100vh;
+    }
+
+    /* notebook lines background */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: repeating-linear-gradient(
+        transparent,
+        transparent 27px,
+        var(--line) 27px,
+        var(--line) 28px
+      );
+      opacity: 0.35;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .wrapper {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 60px 32px 100px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .logo-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--accent);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+
+    .logo-name {
+      font-family: 'Lora', serif;
+      font-size: 1.2rem;
+      color: var(--ink);
+      letter-spacing: 0.02em;
+    }
+
+    h1 {
+      font-family: 'Lora', serif;
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--ink);
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 0.9rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .divider {
+      width: 48px;
+      height: 2px;
+      background: var(--accent);
+      margin: 20px auto 0;
+      border-radius: 2px;
+    }
+
+    .lang-toggle {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 48px;
+    }
+
+    .lang-btn {
+      padding: 6px 20px;
+      border-radius: 20px;
+      border: 1.5px solid var(--line);
+      background: transparent;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      cursor: pointer;
+      color: var(--soft);
+      transition: all 0.2s;
+    }
+
+    .lang-btn.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: white;
+    }
+
+    .lang-btn:hover:not(.active) {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .content { display: none; }
+    .content.active { display: block; }
+
+    section {
+      margin-bottom: 40px;
+      background: rgba(255,255,255,0.7);
+      border-radius: 16px;
+      padding: 28px 32px;
+      border: 1px solid var(--line);
+      backdrop-filter: blur(4px);
+    }
+
+    section:first-child { margin-top: 0; }
+
+    h2 {
+      font-family: 'Lora', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2 .icon {
+      width: 28px;
+      height: 28px;
+      background: var(--accent-light);
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+
+    p { color: var(--soft); margin-bottom: 10px; font-size: 0.97rem; }
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      list-style: none;
+      margin: 10px 0;
+    }
+
+    ul li {
+      color: var(--soft);
+      font-size: 0.97rem;
+      padding: 4px 0 4px 20px;
+      position: relative;
+    }
+
+    ul li::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    .highlight-box {
+      background: var(--accent-light);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin-top: 10px;
+    }
+
+    .highlight-box p {
+      color: var(--ink);
+      font-weight: 500;
+      margin: 0;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 56px;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    footer a { color: var(--accent); text-decoration: none; }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <header>
+    <div class="logo-mark">
+      <div class="logo-icon">✏️</div>
+      <span class="logo-name">Mood Scribbles</span>
+    </div>
+    <h1>Privacy Policy</h1>
+    <p class="subtitle">Last updated: May 2025</p>
+    <div class="divider"></div>
+  </header>
+
+  <div class="lang-toggle">
+    <button class="lang-btn active" onclick="switchLang('en')">English</button>
+    <button class="lang-btn" onclick="switchLang('pt')">Português</button>
+  </div>
+
+  <!-- ENGLISH -->
+  <div class="content active" id="en">
+
+    <section>
+      <h2><span class="icon">👤</span> Overview</h2>
+      <p>Mood Scribbles ("the app") is developed by Pedro Madruga as an independent developer. This Privacy Policy explains how your data is handled when you use the app.</p>
+      <div class="highlight-box">
+        <p>🔒 Mood Scribbles does not collect, share, or transmit any personal data. Everything stays on your device.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="icon">💾</span> Data Storage</h2>
+      <p>All data you create in the app (journal entries, settings, and preferences) is stored locally on your device using Room, Android's offline database library.</p>
+      <ul>
+        <li>No data is sent to external servers</li>
+        <li>No cloud sync or backup is performed by the app</li>
+        <li>Deleting the app removes all associated data from your device</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="icon">🔔</span> Notifications</h2>
+      <p>If you choose to enable writing reminders, the app will request permission to send local notifications. This feature is entirely optional.</p>
+      <ul>
+        <li>Notifications are generated locally on your device</li>
+        <li>No notification content is transmitted externally</li>
+        <li>You can disable notifications at any time in your device settings</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="icon">🔐</span> Biometric Authentication</h2>
+      <p>The app offers an optional biometric lock (fingerprint or face recognition) to protect access to your journal.</p>
+      <ul>
+        <li>Biometric data is processed entirely by your device's secure hardware</li>
+        <li>The app never has access to your raw biometric data</li>
+        <li>Authentication is handled by Android's BiometricPrompt API</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="icon">🌐</span> Internet Access</h2>
+      <p>Mood Scribbles does not require or use an internet connection. The app is fully offline.</p>
+    </section>
+
+    <section>
+      <h2><span class="icon">👶</span> Children's Privacy</h2>
+      <p>The app does not collect personal information from anyone, including children under the age of 13.</p>
+    </section>
+
+    <section>
+      <h2><span class="icon">✏️</span> Changes to This Policy</h2>
+      <p>If this policy is updated in the future, the new version will be made available at the same URL. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+    </section>
+
+    <section>
+      <h2><span class="icon">📬</span> Contact</h2>
+      <p>If you have any questions about this Privacy Policy, feel free to reach out:</p>
+      <p><strong>Developer:</strong> Pedro Madruga<br/>
+      <strong>Email:</strong> your@email.com</p>
+    </section>
+
+  </div>
+
+  <!-- PORTUGUÊS -->
+  <div class="content" id="pt">
+
+    <section>
+      <h2><span class="icon">👤</span> Visão Geral</h2>
+      <p>O Mood Scribbles é desenvolvido por Pedro Madruga como desenvolvedor independente. Esta Política de Privacidade explica como seus dados são tratados ao usar o aplicativo.</p>
+      <div class="highlight-box">
+        <p>🔒 O Mood Scribbles não coleta, compartilha ou transmite nenhum dado pessoal. Tudo fica no seu dispositivo.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="icon">💾</span> Armazenamento de Dados</h2>
+      <p>Todos os dados criados no app (entradas do diário, configurações e preferências) são armazenados localmente no seu dispositivo usando o Room, biblioteca de banco de dados offline do Android.</p>
+      <ul>
+        <li>Nenhum dado é enviado a servidores externos</li>
+        <li>O app não realiza sincronização ou backup na nuvem</li>
+        <li>Desinstalar o app remove todos os dados associados do dispositivo</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="icon">🔔</span> Notificações</h2>
+      <p>Se você optar por ativar os lembretes de escrita, o app solicitará permissão para enviar notificações locais. Esse recurso é totalmente opcional.</p>
+      <ul>
+        <li>As notificações são geradas localmente no dispositivo</li>
+        <li>Nenhum conteúdo de notificação é transmitido externamente</li>
+        <li>Você pode desativar as notificações a qualquer momento nas configurações do dispositivo</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="icon">🔐</span> Autenticação Biométrica</h2>
+      <p>O app oferece bloqueio biométrico opcional (impressão digital ou reconhecimento facial) para proteger o acesso ao seu diário.</p>
+      <ul>
+        <li>Os dados biométricos são processados inteiramente pelo hardware seguro do dispositivo</li>
+        <li>O app nunca tem acesso aos seus dados biométricos brutos</li>
+        <li>A autenticação é gerenciada pela API BiometricPrompt do Android</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="icon">🌐</span> Acesso à Internet</h2>
+      <p>O Mood Scribbles não requer nem utiliza conexão com a internet. O app funciona completamente offline.</p>
+    </section>
+
+    <section>
+      <h2><span class="icon">👶</span> Privacidade de Crianças</h2>
+      <p>O app não coleta informações pessoais de ninguém, incluindo crianças menores de 13 anos.</p>
+    </section>
+
+    <section>
+      <h2><span class="icon">✏️</span> Alterações nesta Política</h2>
+      <p>Caso esta política seja atualizada no futuro, a nova versão será disponibilizada no mesmo endereço. O uso contínuo do app após as alterações constitui aceitação da política atualizada.</p>
+    </section>
+
+    <section>
+      <h2><span class="icon">📬</span> Contato</h2>
+      <p>Se você tiver dúvidas sobre esta Política de Privacidade, entre em contato:</p>
+      <p><strong>Desenvolvedor:</strong> Pedro Madruga<br/>
+      <strong>E-mail:</strong> pedrohfonseca01@gmail.com</p>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>© 2025 Pedro Madruga · Mood Scribbles · <a href="#">Back to top</a></p>
+  </footer>
+
+</div>
+
+<script>
+  function switchLang(lang) {
+    document.querySelectorAll('.content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+    document.getElementById(lang).classList.add('active');
+    event.target.classList.add('active');
+  }
+</script>
+</body>
+</html>
